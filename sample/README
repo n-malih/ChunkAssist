@@ -1,0 +1,6 @@
+LAMMPS fix ave/chunk output file to test the application.
+
+1) place the "chunk.txt" file in the same directory as "ChunkAssist" is located.
+2) run ChunkAssist
+3) when asked for the file name write "chunk.txt"
+4) choose an option from the menu
