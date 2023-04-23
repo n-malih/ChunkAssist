@@ -1,2 +1,2 @@
 # ChunkAssist
-LAMMPS chunk output assistant
+LAMMPS fix ave/chunk output assistant
