@@ -4,7 +4,7 @@ LAMMPS fix ave/chunk output assistant
 ## Features:
 - Make animated plot
 - Export data on specific timestep to file
-- Export data for a range of timestp to file
+- Export data for a range of timestep to file
 
 ![](https://iili.io/H8TfJqb.gif)
 
