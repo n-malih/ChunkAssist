@@ -7,7 +7,8 @@ LAMMPS fix ave/chunk output assistant
 - Export data on specific timestep to file
 - Export data for a range of timestp to file
 
-![](https://iili.io/H8TK5xe.gif)
+![](https://iili.io/H8TfJqb.gif)
+[![H8TfJqb.gif](https://iili.io/H8TfJqb.gif)](https://freeimage.host/)
 
 
 ------------------------------------------------------------------
