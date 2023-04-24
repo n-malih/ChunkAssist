@@ -2,9 +2,14 @@
 LAMMPS fix ave/chunk output assistant
 
 
+## Features:
+- Make animated plot
+- Export data on specific timestep to file
+- Export data for a range of timestp to file
+
 
 ------------------------------------------------------------------
-## Usage
+## Usage:
 Run "ChunkAssist.py" from /src directory.
 ```
 cd src
