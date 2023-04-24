@@ -6,8 +6,9 @@ LAMMPS fix ave/chunk output assistant
 ------------------------------------------------------------------
 ## Usage
 Run "ChunkAssist.py" from /src directory.
-```posh
-\src> python ChunkAssis.py 
+```
+cd src
+python ChunkAssis.py 
 ```
 
 
