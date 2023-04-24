@@ -11,8 +11,8 @@ LAMMPS fix ave/chunk output assistant
 ------------------------------------------------------------------
 ## Getting Started
 ### Prerequisites:
-NUMPY - https://numpy.org/install/
-Matplotlib - https://matplotlib.org/stable/users/getting_started/index.html#installation-quick-start
+- NUMPY - https://numpy.org/install/
+- Matplotlib - https://matplotlib.org/stable/users/getting_started/index.html#installation-quick-start
 
 ### Usage:
 Run "ChunkAssist.py" from /src directory.
