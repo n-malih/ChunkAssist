@@ -1,5 +1,5 @@
 # ChunkAssist
-LAMMPS fix ave/chunk output assistant
+LAMMPS fix ave/chunk and fix ave/time output assistant. You can use this tool to animate outputs from "fix ave/chunk" or "fix ave/time vector mode".
 
 ## Features:
 - Make animated plot
