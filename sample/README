@@ -1,6 +1,6 @@
-LAMMPS fix ave/chunk output file to test the application.
+This folder contains two sample files. One is "chunk.txt" a fix ave/chunk, and the other is "avetime.txt" a fix ave/time vector mode output file. You can use any of them to test the application.
 
 1) place the "chunk.txt" file in the same directory as "ChunkAssist" is located.
 2) run ChunkAssist
-3) when asked for the file name write "chunk.txt"
+3) when asked for the file name write "chunk.txt" (or write the complete file path)
 4) choose an option from the menu
