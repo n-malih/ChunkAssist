@@ -2,16 +2,16 @@ import numpy as np
 from pathlib import Path
 
 
-def checkpath():
-    folder = Path('time_series')
+def checkpath(out_dir):
+    folder = Path('{}\\time_series'.format(out_dir))
     if folder.is_dir():
         return
     else:
         folder.mkdir()
 
 
-def single(data_array, timestep, second_header):
-    checkpath()
+def single(data_array, timestep, second_header, out_dir):
+    checkpath(out_dir)
     print('''
 -----Single output-----
 Enter 'b' or 'back' to return to main menu
@@ -28,14 +28,14 @@ To extract data to a file, choose a timestep''')
         try:
             user_input = int(user_input)
             i_step = timestep.index(user_input)
-            np.savetxt('time_series\\{}.txt'.format(timestep[i_step]), data_array[i_step],
+            np.savetxt('{}\\time_series\\{}.txt'.format(out_dir, timestep[i_step]), data_array[i_step],
                        header='{}\n{}'.format(timestep[i_step], second_header), comments='')
         except Exception as error:
             print('Wrong timestep, enter timestep (e.g. 100)', error)
 
 
-def series(data_array, timestep, second_header):
-    checkpath()
+def series(data_array, timestep, second_header, out_dir):
+    checkpath(out_dir)
     print('''
 -----Series output-----
 Enter 'b' or 'back' to return to main menu
@@ -55,7 +55,7 @@ in format first-last-every (e.g. 100-500-100)''')
             first, last, every = int(user_input[0]), int(user_input[1]), int(user_input[2])
             for mystep in range(first, (last + every), every):
                 i_step = timestep.index(mystep)
-                np.savetxt('time_series\\{}.txt'.format(timestep[i_step]), data_array[i_step],
+                np.savetxt('{}\\time_series\\{}.txt'.format(out_dir, timestep[i_step]), data_array[i_step],
                            header='{}\n{}'.format(timestep[i_step], second_header), comments='')
         except Exception as error:
             error_name = type(error).__name__

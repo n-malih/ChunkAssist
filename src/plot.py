@@ -3,7 +3,7 @@ import matplotlib.animation as animation
 import numpy as np
 
 
-def animat(data, step, colname):
+def animat(data, step, colname, out_dir):
     data = np.copy(data)
     print('''
 -----Animation-----
@@ -52,7 +52,8 @@ Select two column to plot in format x-y (e.g. 2-4)''')
             ani = animation.FuncAnimation(
                 fig, animate, frames=data.shape[0], interval=100, blit=True, save_count=50)
 
-            ani.save(filename="animated_plot.html", writer="html")
+            #ani.save(filename="animated_plot.html", writer="html")
+            ani.save('{}\\{}-{}.mp4'.format(out_dir, colname[colx], colname[coly]))
             print('Output created: animated_plot.html')
             plt.show()
             return

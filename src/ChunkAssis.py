@@ -6,7 +6,7 @@ from pathlib import Path
 # Open LAMMPS ave/chunk out file
 print("Enter 'e' or 'exit' to exit program")
 while True:
-    user_input = input('Enter file name:')
+    user_input = input('Enter file name:').strip("\',\"")
     if user_input == 'e' or user_input == 'exit':
         print('Exit program!')
         exit()
@@ -16,6 +16,8 @@ while True:
     else:
         print('File does not exist')
 
+# output directory
+out_dir = Path(user_input).parent
 # read file
 # comment and 2 headers
 data.readline()
@@ -27,10 +29,10 @@ all_step = []  # list of data in each timestep
 data_line = data.readline()
 while data_line:
     time_header = data_line.lstrip(' ').rstrip('\n').split(' ')
-    time_header = [int(i) for i in time_header]
-    timestep.append(time_header[0])
+    # time_header = [int(i) for i in time_header]
+    timestep.append(int(time_header[0]))
     every_step = []
-    for row in range(time_header[1]):  # read data in each timestep
+    for row in range(int(time_header[1])):  # read data in each timestep
         data_line = data.readline().lstrip(' ').rstrip('\n').split(' ')
         every_step.append(data_line)
     all_step.append(every_step)
@@ -48,11 +50,11 @@ Select option number:
 4) Exit''')
     task = input('-->')
     if task == '1':
-        animat(data_array, timestep, second_header)  # make animate plot
+        animat(data_array, timestep, second_header, out_dir)  # make animate plot
     elif task == '2':
-        get_output.single(data_array, timestep, second_header)
+        get_output.single(data_array, timestep, second_header, out_dir)
     elif task == '3':
-        get_output.series(data_array, timestep, second_header)
+        get_output.series(data_array, timestep, second_header, out_dir)
     else:
         print('Exit code!')
         exit()
