@@ -27,7 +27,7 @@ If you need a sample to test the program check /sample directory.
 
 ------------------------------------------------------------------
 ## How to cite:
-Please cite vmdAssist using
+Please cite ChunkAssist using
 
 https://doi.org/10.5281/zenodo.8192970
 [![DOI](https://zenodo.org/badge/631703387.svg)](https://zenodo.org/badge/latestdoi/631703387)
